@@ -75,10 +75,10 @@
         Symbols+Functions {
             display-name = "SF";
             bindings = <
-        &kp F2     &kp F3  &kp F4         &kp F5             &kp F6             &kp F7           &kp F8                &kp F9        &kp F10    &kp F11
-        &kp EXCL   &kp AT  &kp HASH       &hm LSHIFT DOLLAR  &kp PERCENT        &kp CARET        &hm RSHIFT AMPERSAND  &kp ASTERISK  &kp MINUS  &kp EQUAL
-&kp F1  &kp GRAVE  &none   &kp PAGE_DOWN  &kp END            &kp PAUSE_BREAK    &kp PRINTSCREEN  &kp HOME              &kp PAGE_UP   &none      &kp BACKSLASH  &kp F12
-                           &kp DEL        &kp INSERT         &none              &none            &none                 &none
+        &kp F2     &kp F3        &kp F4         &kp F5             &kp F6             &kp F7           &kp F8                &kp F9             &kp F10          &kp F11
+        &kp EXCL   &hm LCTRL AT  &hm LALT HASH  &hm LSHIFT DOLLAR  &kp PERCENT        &kp CARET        &hm RSHIFT AMPERSAND  &hm RALT ASTERISK  &hm RCTRL MINUS  &kp EQUAL
+&kp F1  &kp GRAVE  &none         &kp PAGE_DOWN  &kp END            &kp PAUSE_BREAK    &kp PRINTSCREEN  &kp HOME              &kp PAGE_UP        &none            &kp BACKSLASH  &kp F12
+                                 &kp DEL        &kp INSERT         &none              &none            &none                 &none
             >;
         };
 
