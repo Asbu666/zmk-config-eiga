@@ -96,20 +96,20 @@
         Gaming {
             display-name = "G";
             bindings = <
-       &kp CAPS        &kp Q  &kp W  &kp E      &kp T    &kp ESC  &none   &none   &none  &none
-       &kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F    &kp F5   &none   &none   &none  &none
-&sl 4  &kp LCTRL       &kp Z  &kp X  &kp C      &kp V    &trans   &none   &none   &none  &none  &none
-                              &kp R  &kp SPACE  &kp G    &trans   &trans  &trans
+       &kp CAPS        &kp Q  &kp W  &kp E      &kp T    &none    &none        &none          &none  &none
+       &kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F    &kp F5   &kp ESC      &none          &none  &none
+&sl 4  &kp LCTRL       &kp Z  &kp X  &kp C      &kp V    &kp F12  &none        &none          &none  &none  &none
+                              &kp R  &kp SPACE  &kp G    &to 0    &kp LS(TAB)  &kp BACKSPACE
             >;
         };
 
         Gaming+ {
             display-name = "G+";
             bindings = <
-         &kp Y    &kp N7  &kp N8  &kp N9  &kp U    &kp RA(RC(Y))  &kp RA(RC(U))  &none          &none  &kp LC(RA(DEL))
-         &kp TAB  &kp N1  &kp N2  &kp N3  &kp H    &kp F5         &to 0          &kp LS(TAB)    &none  &none
-&kp ESC  &kp B    &kp N4  &kp N5  &kp N6  &kp M    &kp F12        &none          &none          &none  &none            &kp LA(F4)
-                          &kp J   &kp K   &kp L    &to 0          &kp LS(TAB)    &kp BACKSPACE
+         &kp I    &kp N7  &kp N8  &kp N9  &kp U    &none    &none        &none          &none  &none
+         &kp TAB  &kp N1  &kp N2  &kp N3  &kp H    &kp F5   &kp ESC      &none          &none  &none
+&kp ESC  &kp M    &kp N4  &kp N5  &kp N6  &kp N    &kp F12  &none        &none          &none  &kp LC(LA(ESCAPE))  &kp LA(F4)
+                          &kp J   &kp K   &kp L    &to 0    &kp LS(TAB)  &kp BACKSPACE
             >;
         };
     };
