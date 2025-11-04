@@ -58,43 +58,116 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        lshft_a {
+            bindings = <&kp LSHFT>;
+            key-positions = <10 34>;
+            timeout-ms = <50>;
+        };
+
+        lctrl_s {
+            bindings = <&kp LCTRL>;
+            key-positions = <11 34>;
+            timeout-ms = <50>;
+        };
+
+        lgui_d {
+            bindings = <&kp LGUI>;
+            key-positions = <12 34>;
+            timeout-ms = <50>;
+        };
+
+        lalt_f {
+            bindings = <&kp LALT>;
+            key-positions = <13 34>;
+            timeout-ms = <50>;
+        };
+
+        rshft_scol {
+            bindings = <&kp RSHFT>;
+            key-positions = <19 35>;
+            timeout-ms = <50>;
+        };
+
+        rctrl_l {
+            bindings = <&kp RCTRL>;
+            key-positions = <35 18>;
+            timeout-ms = <50>;
+        };
+
+        rgui_k {
+            bindings = <&kp RGUI>;
+            key-positions = <35 17>;
+            timeout-ms = <50>;
+        };
+
+        ralt_j {
+            bindings = <&kp RALT>;
+            key-positions = <16 35>;
+            timeout-ms = <50>;
+        };
+
+        lmeh_hmr {
+            bindings = <&kp LC(LS(LALT))>;
+            key-positions = <13 12>;
+            timeout-ms = <50>;
+        };
+
+        rmeh_hmr {
+            bindings = <&kp RS(RC(RALT))>;
+            key-positions = <16 17>;
+            timeout-ms = <50>;
+        };
+
+        lhyper_hmr {
+            bindings = <&kp LS(LC(LA(LGUI)))>;
+            key-positions = <13 12 11>;
+            timeout-ms = <50>;
+        };
+
+        rhyper_hmr {
+            bindings = <&kp RS(RC(RA(RGUI)))>;
+            key-positions = <16 17 18>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
 
         Base {
-            display-name = "B";
+            display-name = "0";
             bindings = <
-                &kp Q        &kp W       &kp E       &kp R         &kp T      &kp Y      &kp U         &kp I           &kp O         &kp P
-                &kp A        &kp S       &kp D       &kp F         &kp G      &kp H      &kp J         &kp K           &kp L         &kp SEMI
-&mt LSHIFT ESC  &mt LCTRL Z  &mt LGUI X  &mt LALT C  &mt LSHIFT V  &kp B      &kp N      &mt RSHIFT M  &mt RALT COMMA  &mt RGUI DOT  &mt RCTRL SLASH  &mt RSHIFT APOS
-                                         &kp DEL     &lt 1 SPACE   &kp TAB    &kp ENTER  &lt 1 COLON   &kp BACKSPACE
+         &kp Q  &kp W  &kp E    &kp R        &kp T      &kp Y      &kp U        &kp I          &kp O       &kp P
+         &kp A  &kp S  &kp D    &kp F        &kp G      &kp H      &kp J        &kp K          &kp L       &kp SEMI
+&kp ESC  &kp Z  &kp X  &kp C    &kp V        &kp B      &kp N      &kp M        &kp COMMA      &kp PERIOD  &kp SLASH  &kp APOS
+                       &kp DEL  &lt 1 SPACE  &kp TAB    &kp ENTER  &lt 1 COLON  &kp BACKSPACE
             >;
         };
 
-        FuNumRows {
-            display-name = "FNN";
+        Navigation {
+            display-name = "1";
             bindings = <
-               &kp F2        &kp F3  &kp F4       &kp F5         &kp F6       &kp F7     &kp F8         &kp F9            &kp F10            &kp F11
-               &mt LCTRL N1  &kp N2  &mt LALT N3  &mt LSHIFT N4  &kp N5       &kp N6     &mt RSHIFT N7  &mt RALT N8       &kp N9             &mt RCTRL N0
-&mt LSHIFT F1  &kp LEFT      &kp UP  &kp DOWN     &kp RIGHT      &kp GRAVE    &kp MINUS  &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &mt RSHIFT F12
-                                     &kp CAPS     &to 2          &none        &none      &to 2          &none
+        &kp F2    &kp F3  &kp F4    &kp F5     &kp F6       &kp F7     &kp F8     &kp F9            &kp F10            &kp F11
+        &kp N1    &kp N2  &kp N3    &kp N4     &kp N5       &kp N6     &kp N7     &kp N8            &kp N9             &kp N0
+&kp F1  &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT  &kp GRAVE    &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp F12
+                          &kp CAPS  &to 2      &to 2        &to 2      &to 2      &kp CAPS
             >;
         };
 
-        FuMedia {
-            display-name = "FM";
+        Numbers {
+            display-name = "2";
             bindings = <
-       &none      &none       &none             &none           &none           &none         &none           &none             &none       &none
-       &kp PSCRN  &kp PG_DN   &kp PG_UP         &mt LSHIFT INS  &kp C_VOL_UP    &kp C_VOL_UP  &mt RSHIFT END  &kp PAUSE_BREAK   &kp HOME    &none
-&none  &none      &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT      &kp C_VOL_DN    &kp C_VOL_DN  &kp C_NEXT      &kp C_PLAY_PAUSE  &kp C_PREV  &none  &none
-                              &none             &to 3           &to 0           &to 0         &to 3           &none
+       &none         &none       &none             &none       &none           &none         &none       &none             &none       &none
+       &kp PSCRN     &kp PG_DN   &kp PG_UP         &kp INS     &none           &none         &kp END     &kp PAUSE_BREAK   &kp HOME    &none
+&none  &kp C_VOL_DN  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp C_VOL_UP    &kp C_VOL_UP  &kp C_NEXT  &kp C_PLAY_PAUSE  &kp C_PREV  &kp C_VOL_DN  &none
+                                 &to 3             &to 0       &to 0           &to 0         &to 0       &to 3
             >;
         };
 
         Gaming {
-            display-name = "G";
+            display-name = "3";
             bindings = <
        &kp CAPS        &kp Q  &kp W  &kp E      &kp T    &none    &none        &none          &none  &none
        &kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F    &kp F5   &kp ESC      &none          &none  &none
@@ -104,7 +177,7 @@
         };
 
         Gaming+ {
-            display-name = "G+";
+            display-name = "4";
             bindings = <
          &kp I    &kp N7  &kp N8  &kp N9  &kp U    &none    &none        &none          &none  &none
          &kp TAB  &kp N1  &kp N2  &kp N3  &kp H    &kp F5   &kp ESC      &none          &none  &none
