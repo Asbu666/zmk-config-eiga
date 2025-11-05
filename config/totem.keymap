@@ -22,8 +22,7 @@
 
 &mt {
     quick-tap-ms = <100>;
-    global-quick-tap;
-    flavor = "tap-preferred";
+    flavor = "balanced";
     tapping-term-ms = <170>;
 };
 
@@ -39,10 +38,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
-            global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
 
@@ -58,80 +56,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        lshft_a {
-            bindings = <&kp LSHFT>;
-            key-positions = <10 34>;
-            timeout-ms = <50>;
-        };
-
-        lctrl_s {
-            bindings = <&kp LCTRL>;
-            key-positions = <11 34>;
-            timeout-ms = <50>;
-        };
-
-        lgui_d {
-            bindings = <&kp LGUI>;
-            key-positions = <12 34>;
-            timeout-ms = <50>;
-        };
-
-        lalt_f {
-            bindings = <&kp LALT>;
-            key-positions = <13 34>;
-            timeout-ms = <50>;
-        };
-
-        rshft_scol {
-            bindings = <&kp RSHFT>;
-            key-positions = <19 35>;
-            timeout-ms = <50>;
-        };
-
-        rctrl_l {
-            bindings = <&kp RCTRL>;
-            key-positions = <35 18>;
-            timeout-ms = <50>;
-        };
-
-        rgui_k {
-            bindings = <&kp RGUI>;
-            key-positions = <35 17>;
-            timeout-ms = <50>;
-        };
-
-        ralt_j {
-            bindings = <&kp RALT>;
-            key-positions = <16 35>;
-            timeout-ms = <50>;
-        };
-
-        lmeh_hmr {
-            bindings = <&kp LC(LS(LALT))>;
-            key-positions = <13 12>;
-            timeout-ms = <50>;
-        };
-
-        rmeh_hmr {
-            bindings = <&kp RS(RC(RALT))>;
-            key-positions = <16 17>;
-            timeout-ms = <50>;
-        };
-
-        lhyper_hmr {
-            bindings = <&kp LS(LC(LA(LGUI)))>;
-            key-positions = <13 12 11>;
-            timeout-ms = <50>;
-        };
-
-        rhyper_hmr {
-            bindings = <&kp RS(RC(RA(RGUI)))>;
-            key-positions = <16 17 18>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -139,10 +64,10 @@
         Base {
             display-name = "0";
             bindings = <
-         &kp Q  &kp W  &kp E    &kp R        &kp T      &kp Y      &kp U        &kp I          &kp O       &kp P
-         &kp A  &kp S  &kp D    &kp F        &kp G      &kp H      &kp J        &kp K          &kp L       &kp SEMI
-&kp ESC  &kp Z  &kp X  &kp C    &kp V        &kp B      &kp N      &kp M        &kp COMMA      &kp PERIOD  &kp SLASH  &kp APOS
-                       &kp DEL  &lt 1 SPACE  &kp TAB    &kp ENTER  &lt 1 COLON  &kp BACKSPACE
+         &kp Q        &kp W       &kp E       &kp R        &kp T      &kp Y      &kp U        &kp I          &kp O       &kp P
+         &hm LSHFT A  &hm LALT S  &hm LGUI D  &hm LCTRL F  &kp G      &kp H      &hm RCTRL J  &hm RGUI K     &hm RALT L  &hm RSHFT SEMI
+&kp ESC  &kp Z        &kp X       &kp C       &kp V        &kp B      &kp N      &kp M        &kp COMMA      &kp PERIOD  &kp SLASH       &kp APOS
+                                  &kp DEL     &lt 1 SPACE  &kp TAB    &kp ENTER  &lt 1 COLON  &kp BACKSPACE
             >;
         };
 
