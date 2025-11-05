@@ -21,9 +21,9 @@
 #define Gameplus    5
 
 &mt {
-    quick-tap-ms = <100>;
+    quick-tap-ms = <125>;
     flavor = "balanced";
-    tapping-term-ms = <170>;
+    tapping-term-ms = <260>;
 };
 
 &lt {
@@ -39,12 +39,14 @@
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <300>;
+            tapping-term-ms = <260>;
             quick-tap-ms = <125>;
             bindings = <&kp>, <&kp>;
 
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <80>;
             hold-while-undecided;
+            hold-trigger-key-positions = <13 12 11 10 16 17 18 19>;
+            hold-trigger-on-release;
         };
 
         ts: StickyToggle {
