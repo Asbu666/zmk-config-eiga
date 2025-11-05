@@ -2,9 +2,9 @@
 
 ### Table of contents
 - Branches
-- [TOTEM](#totem)
-- [Dongle Flashing](#dongle-flashing)
-- [ZMK Keymap Editor](#zmk-keymap-editor)
+  - [TOTEM](#totem)
+  - [Dongle Flashing](#dongle-flashing)
+  - [ZMK Keymap Editor](#zmk-keymap-editor)
 
 ## Hello
 
