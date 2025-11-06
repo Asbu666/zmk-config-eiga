@@ -43,9 +43,8 @@
             quick-tap-ms = <125>;
             bindings = <&kp>, <&kp>;
 
-            require-prior-idle-ms = <80>;
+            require-prior-idle-ms = <50>;
             hold-while-undecided;
-            hold-trigger-key-positions = <13 12 11 10 16 17 18 19>;
             hold-trigger-on-release;
         };
 
