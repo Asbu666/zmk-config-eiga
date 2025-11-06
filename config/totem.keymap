@@ -21,9 +21,9 @@
 #define Gameplus    5
 
 &mt {
-    quick-tap-ms = <125>;
+    quick-tap-ms = <110>;
     flavor = "balanced";
-    tapping-term-ms = <260>;
+    tapping-term-ms = <220>;
 };
 
 &lt {
@@ -44,8 +44,6 @@
             bindings = <&kp>, <&kp>;
 
             require-prior-idle-ms = <50>;
-            hold-while-undecided;
-            hold-trigger-on-release;
         };
 
         ts: StickyToggle {
@@ -60,7 +58,48 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        lbckspc_as {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <10 11>;
+            timeout-ms = <50>;
+        };
+
+        rbckspc_lsemi {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <19 18>;
+        };
+
+        F12_F10F11 {
+            bindings = <&kp F12>;
+            key-positions = <8 9>;
+            timeout-ms = <50>;
+            layers = <1>;
+        };
+
+        F1_F2F3 {
+            bindings = <&kp F1>;
+            key-positions = <0 1>;
+            timeout-ms = <50>;
+            layers = <1>;
+        };
+
+        Tab_qw {
+            bindings = <&kp TAB>;
+            key-positions = <0 1>;
+            layers = <1>;
+            timeout-ms = <50>;
+        };
+
+        Enter_op {
+            bindings = <&kp ENTER>;
+            key-positions = <8 9>;
+            timeout-ms = <50>;
+            layers = <1>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -68,30 +107,30 @@
         Base {
             display-name = "0";
             bindings = <
-         &kp Q        &kp W       &kp E       &kp R        &kp T      &kp Y      &kp U        &kp I          &kp O       &kp P
-         &hm LSHFT A  &hm LALT S  &hm LGUI D  &hm LCTRL F  &kp G      &kp H      &hm RCTRL J  &hm RGUI K     &hm RALT L  &hm RSHFT SEMI
-&kp ESC  &kp Z        &kp X       &kp C       &kp V        &kp B      &kp N      &kp M        &kp COMMA      &kp PERIOD  &kp SLASH       &kp APOS
-                                  &kp DEL     &lt 1 SPACE  &kp TAB    &kp ENTER  &lt 1 COLON  &kp BACKSPACE
+                &kp Q  &kp W       &kp E       &kp R        &kp T    &kp Y  &kp U        &kp I       &kp O       &kp P
+                &kp A  &mt LALT S  &mt LGUI D  &mt LCTRL F  &kp G    &kp H  &mt RCTRL J  &mt RGUI K  &mt RALT L  &kp SEMI
+&mt CAPS LSHFT  &kp Z  &kp X       &kp C       &kp V        &kp B    &kp N  &kp M        &kp COMMA   &kp PERIOD  &kp SLASH  &mt CAPS RSHFT
+                                   &sl 2       &kp SPACE    &sl 1    &mo 1  &kp SPACE    &mo 2
             >;
         };
 
-        Navigation {
+        FuncyNums {
             display-name = "1";
             bindings = <
-        &kp F2        &kp F3       &kp F4       &kp F5        &kp F6       &kp F7     &kp F8        &kp F9            &kp F10            &kp F11
-        &hm LSHFT N1  &hm LALT N2  &hm LGUI N3  &hm LCTRL N4  &kp N5       &kp N6     &hm RCTRL N7  &hm RGUI N8       &hm RALT N9        &hm RSHFT N0
-&kp F1  &kp LEFT      &kp UP       &kp DOWN     &kp RIGHT     &kp GRAVE    &kp MINUS  &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp F12
-                                   &kp CAPS     &to 2         &to 2        &to 2      &to 2         &kp CAPS
+        &kp F2    &kp F3       &kp F4       &kp F5        &kp F6       &kp F7     &kp F8        &kp F9            &kp F10            &kp F11
+        &kp N1    &mt LALT N2  &mt LGUI N3  &mt LCTRL N4  &kp N5       &kp N6     &mt RCTRL N7  &mt RGUI N8       &mt RALT N9        &kp N0
+&trans  &kp LEFT  &kp UP       &kp DOWN     &kp RIGHT     &kp GRAVE    &kp MINUS  &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &trans
+                               &kp CAPS     &to 2         &to 2        &to 2      &to 2         &kp CAPS
             >;
         };
 
-        Numbers {
+        FuncyMed {
             display-name = "2";
             bindings = <
-       &none         &none       &none             &none       &none           &none         &none       &none             &none       &none
-       &kp PSCRN     &kp PG_DN   &kp PG_UP         &kp INS     &none           &none         &kp END     &kp PAUSE_BREAK   &kp HOME    &none
-&none  &kp C_VOL_DN  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp C_VOL_UP    &kp C_VOL_UP  &kp C_NEXT  &kp C_PLAY_PAUSE  &kp C_PREV  &kp C_VOL_DN  &none
-                                 &to 3             &to 0       &to 0           &to 0         &to 0       &to 3
+        &none         &none           &none             &none          &none           &none         &none       &none             &none       &none
+        &kp PSCRN     &mt LALT PG_UP  &mt LGUI PG_DN    &mt LCTRL INS  &none           &none         &kp END     &kp PAUSE_BREAK   &kp HOME    &none
+&trans  &kp C_VOL_DN  &kp C_PREV      &kp C_PLAY_PAUSE  &kp C_NEXT     &kp C_VOL_UP    &kp C_VOL_UP  &kp C_NEXT  &kp C_PLAY_PAUSE  &kp C_PREV  &kp C_VOL_DN  &trans
+                                      &to 3             &to 0          &to 0           &to 0         &to 0       &to 3
             >;
         };
 
