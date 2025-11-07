@@ -104,7 +104,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        Base {
+        L0 {
             display-name = "0";
             bindings = <
                 &kp Q  &kp W       &kp E       &kp R        &kp T    &kp Y  &kp U        &kp I       &kp O       &kp P
@@ -114,27 +114,27 @@
             >;
         };
 
-        FuncyNums {
+        L1 {
             display-name = "1";
             bindings = <
         &kp F2    &kp F3       &kp F4       &kp F5        &kp F6       &kp F7     &kp F8        &kp F9            &kp F10            &kp F11
         &kp N1    &mt LALT N2  &mt LGUI N3  &mt LCTRL N4  &kp N5       &kp N6     &mt RCTRL N7  &mt RGUI N8       &mt RALT N9        &kp N0
 &trans  &kp LEFT  &kp UP       &kp DOWN     &kp RIGHT     &kp GRAVE    &kp MINUS  &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &trans
-                               &kp CAPS     &to 2         &to 2        &to 2      &to 2         &kp CAPS
+                               &trans       &trans        &trans       &trans     &trans        &trans
             >;
         };
 
-        FuncyMed {
+        L2 {
             display-name = "2";
             bindings = <
-        &none         &none           &none             &none          &none           &none         &none       &none             &none       &none
+        &none         &none           &none             &none          &to 3           &to 3         &none       &none             &none       &none
         &kp PSCRN     &mt LALT PG_UP  &mt LGUI PG_DN    &mt LCTRL INS  &none           &none         &kp END     &kp PAUSE_BREAK   &kp HOME    &none
 &trans  &kp C_VOL_DN  &kp C_PREV      &kp C_PLAY_PAUSE  &kp C_NEXT     &kp C_VOL_UP    &kp C_VOL_UP  &kp C_NEXT  &kp C_PLAY_PAUSE  &kp C_PREV  &kp C_VOL_DN  &trans
-                                      &to 3             &to 0          &to 0           &to 0         &to 0       &to 3
+                                      &trans            &trans         &trans          &trans        &trans      &trans
             >;
         };
 
-        Gaming {
+        G1 {
             display-name = "3";
             bindings = <
        &kp CAPS        &kp Q  &kp W  &kp E      &kp T    &none    &none        &none          &none  &none
@@ -144,7 +144,7 @@
             >;
         };
 
-        Gaming+ {
+        G2 {
             display-name = "4";
             bindings = <
          &kp I    &kp N7  &kp N8  &kp N9  &kp U    &none    &none        &none          &none  &none
