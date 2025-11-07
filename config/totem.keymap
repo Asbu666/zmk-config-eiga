@@ -61,43 +61,18 @@
     combos {
         compatible = "zmk,combos";
 
-        lbckspc_as {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <10 11>;
+        F6_F4F5 {
+            bindings = <&kp F6>;
+            key-positions = <3 4>;
+            layers = <2>;
             timeout-ms = <50>;
         };
 
-        rbckspc_lsemi {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <19 18>;
-        };
-
-        F12_F10F11 {
-            bindings = <&kp F12>;
-            key-positions = <8 9>;
+        F7_F8F9 {
+            bindings = <&kp F7>;
+            key-positions = <5 6>;
             timeout-ms = <50>;
-            layers = <1>;
-        };
-
-        F1_F2F3 {
-            bindings = <&kp F1>;
-            key-positions = <0 1>;
-            timeout-ms = <50>;
-            layers = <1>;
-        };
-
-        Tab_qw {
-            bindings = <&kp TAB>;
-            key-positions = <0 1>;
-            layers = <1>;
-            timeout-ms = <50>;
-        };
-
-        Enter_op {
-            bindings = <&kp ENTER>;
-            key-positions = <8 9>;
-            timeout-ms = <50>;
-            layers = <1>;
+            layers = <2>;
         };
     };
 
@@ -107,17 +82,17 @@
         L0 {
             display-name = "0";
             bindings = <
-                &kp Q  &kp W       &kp E       &kp R        &kp T    &kp Y  &kp U        &kp I       &kp O       &kp P
-                &kp A  &mt LALT S  &mt LGUI D  &mt LCTRL F  &kp G    &kp H  &mt RCTRL J  &mt RGUI K  &mt RALT L  &kp SEMI
-&mt CAPS LSHFT  &kp Z  &kp X       &kp C       &kp V        &kp B    &kp N  &kp M        &kp COMMA   &kp PERIOD  &kp SLASH  &mt CAPS RSHFT
-                                   &sl 2       &kp SPACE    &sl 1    &mo 1  &kp SPACE    &mo 2
+               &kp Q  &kp W       &kp E       &kp R        &kp T        &kp Y      &kp U        &kp I       &kp O       &kp P
+               &kp A  &mt LALT S  &mt LGUI D  &mt LCTRL F  &kp G        &kp H      &mt RCTRL J  &mt RGUI K  &mt RALT L  &kp SEMI
+&mt LSHFT ESC  &kp Z  &kp X       &kp C       &kp V        &kp B        &kp N      &kp M        &kp COMMA   &kp PERIOD  &kp SLASH  &mt RSHFT SQT
+                                  &sl 2       &lt 1 SPACE  &lt 2 TAB    &lt 2 RET  &lt 1 SPACE  &mo 2
             >;
         };
 
         L1 {
             display-name = "1";
             bindings = <
-        &kp F2    &kp F3       &kp F4       &kp F5        &kp F6       &kp F7     &kp F8        &kp F9            &kp F10            &kp F11
+        &kp F1    &kp F2       &kp F3       &kp F4        &kp F5       &kp F8     &kp F9        &kp F10           &kp F11            &kp F12
         &kp N1    &mt LALT N2  &mt LGUI N3  &mt LCTRL N4  &kp N5       &kp N6     &mt RCTRL N7  &mt RGUI N8       &mt RALT N9        &kp N0
 &trans  &kp LEFT  &kp UP       &kp DOWN     &kp RIGHT     &kp GRAVE    &kp MINUS  &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &trans
                                &trans       &trans        &trans       &trans     &trans        &trans
