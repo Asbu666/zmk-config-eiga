@@ -46,7 +46,6 @@
             require-prior-idle-ms = <50>;
             hold-while-undecided;
             hold-trigger-on-release;
-            retro-tap;
         };
 
         ts: StickyToggle {
