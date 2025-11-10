@@ -38,7 +38,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <220>;
             quick-tap-ms = <110>;
             bindings = <&kp>, <&kp>;
@@ -46,6 +46,7 @@
             require-prior-idle-ms = <50>;
             hold-while-undecided;
             hold-trigger-on-release;
+            retro-tap;
         };
 
         ts: StickyToggle {
