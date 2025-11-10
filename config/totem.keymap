@@ -45,7 +45,6 @@
 
             require-prior-idle-ms = <50>;
             hold-while-undecided;
-            retro-tap;
             hold-trigger-on-release;
         };
 
